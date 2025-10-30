@@ -1,0 +1,205 @@
+/* o * é um seletor universal, que seleciona todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* root = raiz */
+:root {
+  /* -- é usado para definir variáveis personalizadas em CSS */
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+  /* imagem svg = é um formato de imagem vetorial baseado em XML que pode ser estilizado com CSS */
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  /* var = variável CSS */
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  /*font-family = família da fonte*/
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+/*container = contêiner*/
+/* # é usado para selecionar elementos por ID */
+/*id = identificador único de um elemento (ex: #container, #profile, #social-links)*/
+#container {
+  width: 360px;
+  margin: auto;
+
+  padding: 0 24px;
+}
+
+/*profile*/
+
+#profile {
+  text-align: center;
+  padding: 24px;
+  margin-top: 8px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  /*line-height = altura da linha */
+  line-height: 24px;
+}
+
+/*switch*/
+#switch {
+  width: 64px;
+  position: relative;
+  /*margin = margem*/
+  margin: 24px auto;
+}
+
+#switch button {
+  /* width = largura*/
+  width: 32px;
+  /*height = altura*/
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  /*border = borda*/
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: 9999px;
+  /*border-radius = arredonda os cantos do elemento com um raio em pixels*/
+  border-radius: 9999px;
+}
+
+/*links de navegação*/
+/* ul = unordered list (lista não ordenada) */
+ul {
+  /*list-style = personaliza a aparência dos marcadores ou da numeração em listas */
+  list-style: none;
+
+  display: flex;
+  /*flex-direction = para definir a direção em que os itens de um contêiner flexível são organizados */
+  flex-direction: column;
+  /*gap = adiciona um espaçamento em pixels entre os itens da lista*/
+  gap: 16px;
+
+  padding: 0 24px;
+}
+
+ul li a {
+  /* li = list item (item da lista) */
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  border-radius: 9px;
+  /*backdrop-filter = filtro de fundo*/
+  backdrop-filter: blur(4px);
+
+  /*text-decoration: none; remove o sublinhado dos links*/
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.3s;
+}
+
+/* pseudo-selector */
+ul li a:hover {
+  border: 1.5px solid var(--text-color);
+  background: var(--surface-color-hover);
+}
+
+/*social links*/
+
+#social-links {
+  margin-top: 24px;
+
+  display: flex;
+  justify-content: center;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  /* display = exibição = block/flex/grid/inline/inline-block/none */
+  display: flex;
+  align-items: center;
+  /*justify-content = é uma propriedade do CSS que alinha itens dentro de um contêiner flexível */
+  justify-content: center;
+
+  /* padding = espaçamento interno */
+  padding: 16px;
+  border-radius: 50px;
+  /*transition = adiciona uma transição suave*/
+  transition: background 0.2s;
+}
+
+/*hover é um pseudo-seletor que aplica estilos quando o usuário passa o mouse sobre o elemento*/
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+/*footer = rodapé*/
+footer {
+  /*text-align = left/center/right/justify */
+  text-align: center;
+  /*font-size = tamanho da fonte*/
+  font-size: 14px;
+  /*padding = preenchimento  */
+  padding: 24px 0;
+}
+
+/* div é block, img é inline */
+/* a = anchor (âncora, link) */
+/* button = botão */
+/*target="_blank" abre o link em uma nova aba*/
+/*rel="noopener noreferrer" é uma medida de segurança para links que abrem em nova aba*/
+/* strong = negrito */
+/* alt = texto alternativo para imagens */
+/* span = elemento em linha genérico */
+/* webkit é um prefixo usado para propriedades CSS específicas do navegador Safari/Chrome */
+/* box-shadow = sombra da caixa */
+/* box-sizing = border-box inclui bordas e preenchimento na largura e altura totais do elemento */
