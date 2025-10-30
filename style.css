@@ -9,7 +9,7 @@
 :root {
   /* -- é usado para definir variáveis personalizadas em CSS */
   --text-color: white;
-  --bg-url: url(./.vscode/assets/bg-mobile.jpg);
+  --bg-url: url(./.vscode/assets/bg-mobile.gif);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -20,7 +20,7 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(./.vscode/assets/bg-mobile-light.jpg);
+  --bg-url: url(./.vscode/assets/bg-mobile-light.gif);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -200,11 +200,11 @@ footer {
 /* media queries */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./.vscode/assets/bg-desktop.jpg);
+    --bg-url: url(./.vscode/assets/bg-desktop.gif);
   }
 
   .light {
-    --bg-url: url(./.vscode/assets/bg-desktop-light.jpg);
+    --bg-url: url(./.vscode/assets/bg-desktop-light.gif);
   }
 }
 
