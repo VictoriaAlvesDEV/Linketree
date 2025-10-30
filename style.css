@@ -31,6 +31,7 @@
 body {
   /* var = variável CSS */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -45,7 +46,7 @@ body * {
 #container {
   width: 100%;
   margin: 588px;
-  margin: auto;
+  margin: 56px auto 0px;
 
   padding: 0 24px;
 }
@@ -55,7 +56,6 @@ body * {
 #profile {
   text-align: center;
   padding: 24px;
-  margin-top: 8px;
 }
 
 #profile img {
@@ -66,6 +66,7 @@ body * {
   font-weight: 500;
   /*line-height = altura da linha */
   line-height: 24px;
+   margin-top: 8px;
 }
 
 /*switch*/
@@ -73,7 +74,7 @@ body * {
   width: 64px;
   position: relative;
   /*margin = margem*/
-  margin: 24px auto;
+  margin: 4px auto;
 }
 
 #switch button {
@@ -91,11 +92,18 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+   animation: slide-back 0.2s;
 }
 
 .light #switch button {
   right: 0;
   left: initial;
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -105,7 +113,7 @@ body * {
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: 9999px;
+  -webkit-backdrop-filter: blur(4px)px;
   /*border-radius = arredonda os cantos do elemento com um raio em pixels*/
   border-radius: 9999px;
 }
@@ -122,7 +130,7 @@ ul {
   /*gap = adiciona um espaçamento em pixels entre os itens da lista*/
   gap: 16px;
 
-  padding: 0 24px;
+  padding: 24px 0;
 }
 
 ul li a {
@@ -139,7 +147,7 @@ ul li a {
   border-radius: 9px;
   /*backdrop-filter = filtro de fundo*/
   backdrop-filter: blur(4px);
-
+  -webkit-backdrop-filter: blur(4px);
   /*text-decoration: none; remove o sublinhado dos links*/
   text-decoration: none;
   font-weight: 500;
@@ -156,7 +164,7 @@ ul li a:hover {
 /*social links*/
 
 #social-links {
-  margin-top: 24px;
+  padding: 24px 0;
 
   display: flex;
   justify-content: center;
