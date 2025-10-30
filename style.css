@@ -198,6 +198,8 @@ footer {
 }
 
 /* media queries */
+/* media queries são usadas para aplicar estilos CSS com base em condições específicas, como a largura da tela */
+/* min-width = largura mínima */
 @media (min-width: 700px) {
   :root {
     --bg-url: url(./.vscode/assets/bg-desktop.gif);
@@ -209,6 +211,7 @@ footer {
 }
 
 /* animation */
+/* keyframes = define uma animação em CSS */
 @keyframes slide-in {
   from {
     left: 0;
