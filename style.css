@@ -9,28 +9,29 @@
 :root {
   /* -- é usado para definir variáveis personalizadas em CSS */
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-url: url(./.vscode/assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(./assets/moon-stars.svg);
+  --switch-bg-url: url(./.vscode/assets/moon-stars.svg);
   /* imagem svg = é um formato de imagem vetorial baseado em XML que pode ser estilizado com CSS */
 }
 
 .light {
   --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-url: url(./.vscode/assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assets/sun.svg);
+  --switch-bg-url: url(./.vscode/assets/sun.svg);
 }
 
 body {
   /* var = variável CSS */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -45,7 +46,7 @@ body * {
 #container {
   width: 100%;
   margin: 588px;
-  margin: auto;
+  margin: 56px auto 0px;
 
   padding: 0 24px;
 }
@@ -55,7 +56,6 @@ body * {
 #profile {
   text-align: center;
   padding: 24px;
-  margin-top: 8px;
 }
 
 #profile img {
@@ -66,6 +66,7 @@ body * {
   font-weight: 500;
   /*line-height = altura da linha */
   line-height: 24px;
+  margin-top: 8px;
 }
 
 /*switch*/
@@ -73,7 +74,7 @@ body * {
   width: 64px;
   position: relative;
   /*margin = margem*/
-  margin: 24px auto;
+  margin: 4px auto;
 }
 
 #switch button {
@@ -91,11 +92,14 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.2s;
 }
 
 .light #switch button {
   right: 0;
   left: initial;
+  animation: slide-in 0.2s forwards;
 }
 
 #switch span {
@@ -105,7 +109,7 @@ body * {
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: 9999px;
+  -webkit-backdrop-filter: blur(4px) px;
   /*border-radius = arredonda os cantos do elemento com um raio em pixels*/
   border-radius: 9999px;
 }
@@ -122,7 +126,7 @@ ul {
   /*gap = adiciona um espaçamento em pixels entre os itens da lista*/
   gap: 16px;
 
-  padding: 0 24px;
+  padding: 24px 0;
 }
 
 ul li a {
@@ -139,7 +143,7 @@ ul li a {
   border-radius: 9px;
   /*backdrop-filter = filtro de fundo*/
   backdrop-filter: blur(4px);
-
+  -webkit-backdrop-filter: blur(4px);
   /*text-decoration: none; remove o sublinhado dos links*/
   text-decoration: none;
   font-weight: 500;
@@ -156,7 +160,7 @@ ul li a:hover {
 /*social links*/
 
 #social-links {
-  margin-top: 24px;
+  padding: 24px 0;
 
   display: flex;
   justify-content: center;
@@ -196,11 +200,11 @@ footer {
 /* media queries */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
+    --bg-url: url(./.vscode/assets/bg-desktop.jpg);
   }
 
   .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
+    --bg-url: url(./.vscode/assets/bg-desktop-light.jpg);
   }
 }
 

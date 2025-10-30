@@ -3,6 +3,7 @@ function toggleMode() {
   html.classList.toggle("light");
 }
 
+
 // function = palavra reservada para declarar uma função
 // toggleMode = nome da função
 // () = parênteses que indicam que é uma função
