@@ -43,7 +43,8 @@ body * {
 /* # é usado para selecionar elementos por ID */
 /*id = identificador único de um elemento (ex: #container, #profile, #social-links)*/
 #container {
-  width: 360px;
+  width: 100%;
+  margin: 588px;
   margin: auto;
 
   padding: 0 24px;
@@ -190,6 +191,36 @@ footer {
   font-size: 14px;
   /*padding = preenchimento  */
   padding: 24px 0;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
 
 /* div é block, img é inline */
