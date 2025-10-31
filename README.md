@@ -29,6 +29,7 @@ Esse projeto foi desenvolvido a partir das seguintes tecnologias:
 - JavaScript
 - Git e Github
 - Figma
+- Canva
 
 ## 💻 Projeto
 
